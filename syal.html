@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<head>
+    <title> SheShare </title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+        padding: 3%;
+        font-size: larger;
+    }
+        
+    h1{
+        margin-left: 2em;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        touch-action: cross-slide-y;
+        display:inline;
+        text-decoration: wavy;
+        padding: 3em;
+        margin-top: 3em;
+
+    }
+    button{
+        width: 6em;
+        background-image:linear-gradient(rgb(255, 255, 255), rgb(255, 211, 211));
+        font-family: 'Courier New', Courier, monospace;
+        height: 3em;
+        border-radius: 1em;
+    }
+    fieldset{
+        display: inline;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 1%;
+    }
+    table{
+        
+        width: 100%;
+       
+        padding:2%;
+        overflow:scroll;
+        border-radius: 1em;
+
+    }
+    td{
+        width: 50%;
+    height:10em;
+    border-color: rgb(0, 0, 0);
+    border-style: groove;
+    border-radius:1em;
+    padding-left: 2%;
+    }
+    th{
+        margin-left: 0% auto;
+        text-align: center;
+        margin-left: 50%;
+    }
+    img{
+        height: 12em;
+        width:18em;
+        display:inline;
+        border-radius: 2%;
+    }
+    p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left:3%;
+    }
+    
+</style>
+<body>
+    <h1> SHE SHARE VACATION RENTALS </h1>  
+    
+    
+     <button id = reg onmouseover="mouseOvera()" onmouseout="mouseOut()">Register</button>
+     <button id = log onmouseover="mouseOverb()" onmouseout="mouseOut()">Login</button><br><br>
+     
+     <script>
+        const a = getElementById("reg");
+        const b = getElementById("log");
+        a.addEventListener("mouseover", mouseOvera);
+        a.addEventListener("mouseout", mouseOut);
+        b.addEventListener("mouseover",mouseOverb);
+        b.addEventListener("mouseout", mouseOut);
+        function mouseOvera(){
+            document.getElementById("reg").style.color= "red";
+        }
+        function mouseOverb(){
+            document.getElementById("log").style.color= "red";
+        }
+        function mouseOut(){
+            document.getElementById("reg").style.color= "black";
+            document.getElementById("log").style.color= "black";
+        }
+
+        
+        </script>
+        
+        <fieldset>
+        </fieldset><br><br>
+        <p Style="font-family: Arial, Helvetica, sans-serif; font-size: larger">make your vacation stay unforgettable!</p>
+        <form>
+        <button type= "radio" Style="border-radius: 40em; width:2em; height: 2em; margin-left: 8em;"></button> Welcome
+        <button type= "radio" Style="border-radius: 40em; width:2em; height: 2em; margin-left: 8em;"></button> Safety
+        <button type= "radio" Style="border-radius: 40em; width:2em; height: 2em; margin-left: 8em;"></button> Adventure
+        <button type= "radio" Style="border-radius: 40em; width:2em; height: 2em; margin-left: 8em;"></button> Community
+            </form>
+        <button Style="width: 10em; height: 6em;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 2em; border-radius: 1em; margin-top: 3em; font-size: larger; text-align: left; padding-left: 3%; display: inline; " id = share onmouseover="transfer()" onmouseout="trans()"><a href= #display1> Share<br>Your <br>Room</a></button>
+        <button  Style="width: 10em; height: 6em; display:inline; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 2em; border-radius: 1em; margin-top: 3em; font-size: larger; text-align: left; padding-left: 3%; " id = rent onmouseover = "transfer1()" onmouseout = "trans()" onclick="onclick1()"><a href = #dis>Rent<br>Your<br>Room</a></button><br><br><br>
+        
+
+        <img src="c:\Users\dhiraj.patil\Desktop\systemic altruision\airbnb.jpeg" alt="image">
+        <img src="c:\Users\dhiraj.patil\Desktop\systemic altruision\download.jpeg" alt="image2">
+        <img src="c:\Users\dhiraj.patil\Desktop\systemic altruision\download (1).jpeg" alt="image3">
+        <img src="c:\Users\dhiraj.patil\Desktop\systemic altruision\download (3).jpeg" alt="img4">
+        <script>
+            const c= document.getElementById("share");
+            const d = document.getElementById("rent")
+            b.addEventListener("onmouseover", transfer());
+            b.addEventListener("onmouseout", trans());
+            d.addEventListener("onmouseover", tranfer1());
+            d.addEventListener("onmouseout", trans())
+
+            function transfer(){
+                document.getElementById("share").style.transform = "translateY(-10px)";
+            }
+            function transfer1(){
+                document.getElementById("rent").style.transform = "translateY(-10px)";
+            }
+            function trans(){
+                document.getElementById("share").style.transform = "translateY(10px)";
+                document.getElementById("rent").style.transform = "translateY(10px)";
+            }
+        </script>
+        <fieldset>
+        </fieldset><br><br>
+        <table id = "dis" style="width: 100%; height: 20em; background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 211, 211))">
+            <tr><td><b>WHEN</b><br><br>
+            <form>
+            <b>Check in:  Check out:  </b><br>
+            <input type="date" id="Start" name="Start date">  
+            <input type="date" id="end" name="end date"><br><br>
+            </form>
+            <b> Where to?</b><br>
+            <form>
+                <select>
+                    <option id ="deh">Dehradun</option>
+                    <option id ="Che">Chennai</option>
+                    <option id ="ban">Bangalore</option>
+                    <option id ="del">Delhi</option>
+                </select>
+                <input id = "sub" type="submit" onclick="click()">
+            </form>
+        </td>
+         <td><br><br>
+               <b>Make your profile!</b><br><br>
+               <form>
+                Name: <input type = "text"><br><br>
+                Age: <select>
+                    <option id = "age">18-25</option>
+                    <option id = "adult">25-30</option>
+                    <option id = "senior">>30</option>
+                </select><br><br>
+                Profession: <select>
+                    <option id = "pro">Student</option>
+                    <option id = "work">Working</option>
+                    <option id = "trip">Trip</option>
+                </select><br><br>
+                Smoker: <input type="button">Yes<br>
+                        <input type="button">No<br><br>
+                Your staycation story:
+                <input type="text">
+                
+                <input  type="submit" >
+                </form>
+            </td>
+            </tr>
+        </table>    <br>
+        
+        <fieldset>
+        </fieldset><br><br>
+        
+        <div Style=" background-color: antiquewhite;  height: 17em; overflow:scroll; text-align: center;">
+            <table style="text-align: center; background-image: linear-gradient(rgb(255, 255, 255)rgb(55, 175, 211)) ">
+                <th id = head style="text-align: center;"> <p Style= "margin-left: 0% auto" id= display></p>CITIES</th>
+                <tr Style="width: 100%; height: 10em; ">
+                    <td Style="width: 34%;">
+                       Dehradun
+                    </td>
+                    <td Style="width: 34%;">
+                        Pune
+                    </td>
+                    <td Style="width: 34%;" >
+                        Delhi
+                    </td>
+                </tr>
+                <tr>
+                    <td Style="width: 34%;">
+                        Mumbai
+                    </td>
+                    <td Style="width: 34%;">   
+                         Bangalore
+                    </td>
+                    <td Style="width: 34%">
+                        Kerela
+                    </td>
+                </tr>
+                <tr>
+                <td Style="width: 34%;">
+                    Gujarat
+                </td>
+                <td Style="width: 34%; ">
+                    West Bengal
+                </td>
+                <td Style="width: 34%; "> 
+                    hyderabad
+                </td>
+            </tr>
+            <tr>
+                <td Style="width: 34%;">
+                    Uttar Pradesh
+                </td>
+                <td Style="width: 34%; ">
+                    Chennai
+                </td>
+                <td Style="width: 34%; "> 
+                    Bhopal
+                </td>
+            </tr>
+
+            </table>
+            </div>
+            <fieldset>
+            </fieldset><br><br>
+            <div id = display1 style="padding: 2%; font-size:larger; 
+                 background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 211, 211))">
+                    <b>Please set the rate for a single room: </b><br> 
+                    <input type="text"><br><br><br>
+                    <b>Please set the rental time for the room: </b><br>
+                    Min: <select>
+                        <option >1</option>night<br>
+                        <option>2</option><br>
+                        <option>3</option>
+                        
+                    </select>
+                    max:<select>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select><br><br>
+                    Check rentals? <button><a href= "syal2.html">Yes</a></button>
+
+                
+                
+            </div>
+            <fieldset>
+
+            </fieldset>
+            <div style="height:15em">
+                
+            <table style="background-image:linear-gradient(rgb(255, 255, 255), rgb(245, 160, 160));">
+                <tr style="height:10em">
+                    <td style="width:20%; height:10%">
+                        <u>SHE SHARE</u><br><br>
+                        About us<br>
+                        Careers<br>
+                        Contact us<br>
+                        Follow us: @sheshare <br>
+
+                                         </td>
+                                         <td style = "width:20%; height:10%">
+                                            <u>Support</u><br><br>
+                                            FAQs<br>
+                                            Cancellation policy<br>
+                                         </td>
+                                         <td style="width:20%; height:10%">
+                                            <u>Become a host</u><br><br>
+                                            Hosting resources<br>
+                                            Hosting responsibility<br>
+                                            Share a Room<br>
+                                            Pets
+
+
+                                         </td>
+                                         <td style="width:20%; height:10%">
+                                            <u>Terms & Privacy</u><br><br>
+                                            Terms & conditions<br>
+                                            Privacy policy
+
+                                         </td>
+                </tr>
+            </table>
+            <script>
+                
+                
+                
+                const y = document.getElementById("sub");
+                y.addEventListener("onclick", click);
+                function click(){
+                    var data = "thanks"
+                    document.getElementById("hotels").innerHTML= data
+                }
+            
+                
+                
+                
+            </script>
+
+
+
+        
+    </body>
